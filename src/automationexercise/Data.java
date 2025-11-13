@@ -17,6 +17,7 @@ public class Data {
 	String HomePage="https://automationexercise.com/";
 	String SignUpPage="https://automationexercise.com/signup";
 	String LoginPage="https://automationexercise.com/login";
+	String CartPage="https://automationexercise.com/view_cart";
 	String CustomerFirstName;
 	String CustomerLastName;
 	String Domain="@gmail.com";
@@ -35,4 +36,6 @@ public class Data {
 	String comp="ProgressSoft";
 	String StateInDatabase;
 	String cityInDatabase;
+	String Card_Name="khaled nofal";
+	String cardnum="2092731867";
 }

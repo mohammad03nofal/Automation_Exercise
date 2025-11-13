@@ -6,7 +6,7 @@
       <class name="automationexercise.MyTestCases">
         <methods>
           <include name="setup"/>
-          <include name="LoginTest"/>
+          <include name="AddRandomProductTest"/>
         </methods>
       </class> <!-- automationexercise.MyTestCases -->
     </classes>

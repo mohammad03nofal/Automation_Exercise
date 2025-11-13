@@ -3,6 +3,7 @@ package automationexercise;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.time.Duration;
+import java.util.List;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
@@ -150,6 +151,48 @@ public class MyTestCases extends Data {
 	   boolean actualResult=driver.getPageSource().contains(expectedmessage);
 	   Assert.assertEquals(actualResult, true);
    }
+   
+   @Test(priority=8)
+   public void AddRandomProductTest()
+   {
+	   
+	   for (int i = 1; i <= 8; i++) 
+	   {  
+		List <WebElement> Products = driver.findElements(By.cssSelector(".fa.fa-plus-square"));
+		int RandomProduct = rand.nextInt(Products.size());
+	   Products.get(RandomProduct).click();
+	   boolean StockOut=driver.getPageSource().contains("Out Of Stock");
+	   if(!StockOut)
+	   {
+	   WebElement AddTocartbtn=driver.findElement(By.cssSelector(".btn.btn-default.cart"));
+	   AddTocartbtn.click();
+	   }
+	   driver.navigate().back();
+	   }   
+   }
+   
+   @Test(priority=9)
+   public void CheckoutTest()
+   {
+	  driver.navigate().to(CartPage); 
+	  WebElement proceedtocheckout=driver.findElement(By.cssSelector(".btn.btn-default.check_out"));
+	  proceedtocheckout.click();
+	  WebElement PlaceOrder=driver.findElement(By.cssSelector(".btn.btn-default.check_out"));
+	  PlaceOrder.click();
+	  WebElement CardName=driver.findElement(By.name("name_on_card"));
+	  WebElement CardNumber=driver.findElement(By.name("card_number"));
+	  CardName.sendKeys(Card_Name);
+	  CardNumber.sendKeys(cardnum);
+	  driver.findElement(By.name("cvc")).sendKeys("311");
+	  driver.findElement(By.name("expiry_month")).sendKeys("12");
+	  driver.findElement(By.name("expiry_year")).sendKeys("2025");
+      WebElement payconfirm=driver.findElement(By.xpath("//button[@data-qa='pay-button']"));
+      payconfirm.click();
+      boolean actualResult=driver.getPageSource().contains("Your order has been confirmed!");
+      Assert.assertEquals(actualResult, true);
+	  
+   }
+
 	
    
    
