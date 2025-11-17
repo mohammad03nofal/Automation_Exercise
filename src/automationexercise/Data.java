@@ -29,8 +29,7 @@ public class Data {
 	int randomYear = rand.nextInt(1,120);
     int randomMonth = rand.nextInt(1,13);
     int randomDay = rand.nextInt(1,31);
-    //int RandomproductNames[]= {2,4,6,12,14,16,18,20,22,24,26,28,30,32,34};
-    List <Integer> productIndexes = new ArrayList<>();
+    int RandomproductNames[]= {2,4,6,12,14,16,18,20,22,24,26,28,30,32,34};
 	String Email;
 	String pass="M@k20031312";
 	String PhoneNumberInDatabase;

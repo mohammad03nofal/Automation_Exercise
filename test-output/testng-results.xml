@@ -2,44 +2,44 @@
 <testng-results ignored="2" total="10" passed="8" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-11-17T21:59:44 EET" name="Default suite" finished-at="2025-11-17T22:00:13 EET" duration-ms="29309">
+  <suite started-at="2025-11-17T22:22:44 EET" name="Default suite" finished-at="2025-11-17T22:23:26 EET" duration-ms="42044">
     <groups>
     </groups>
-    <test started-at="2025-11-17T21:59:44 EET" name="Default test" finished-at="2025-11-17T22:00:13 EET" duration-ms="29309">
+    <test started-at="2025-11-17T22:22:44 EET" name="Default test" finished-at="2025-11-17T22:23:26 EET" duration-ms="42044">
       <class name="automationexercise.MyTestCases">
-        <test-method is-config="true" signature="setup()[pri:0, instance:automationexercise.MyTestCases@101639ae]" started-at="2025-11-17T21:59:44 EET" name="setup" finished-at="2025-11-17T21:59:48 EET" duration-ms="4055" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:automationexercise.MyTestCases@4c550889]" started-at="2025-11-17T22:22:44 EET" name="setup" finished-at="2025-11-17T22:22:48 EET" duration-ms="4010" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="InsertRecord()[pri:1, instance:automationexercise.MyTestCases@101639ae]" started-at="2025-11-17T21:59:48 EET" name="InsertRecord" finished-at="2025-11-17T21:59:48 EET" duration-ms="17" status="PASS">
+        <test-method signature="InsertRecord()[pri:1, instance:automationexercise.MyTestCases@4c550889]" started-at="2025-11-17T22:22:48 EET" name="InsertRecord" finished-at="2025-11-17T22:22:48 EET" duration-ms="60" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- InsertRecord -->
-        <test-method signature="Updatedata()[pri:2, instance:automationexercise.MyTestCases@101639ae]" started-at="2025-11-17T21:59:48 EET" name="Updatedata" finished-at="2025-11-17T21:59:48 EET" duration-ms="5" status="PASS">
+        <test-method signature="Updatedata()[pri:2, instance:automationexercise.MyTestCases@4c550889]" started-at="2025-11-17T22:22:48 EET" name="Updatedata" finished-at="2025-11-17T22:22:48 EET" duration-ms="10" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Updatedata -->
-        <test-method signature="ReadData()[pri:3, instance:automationexercise.MyTestCases@101639ae]" started-at="2025-11-17T21:59:48 EET" name="ReadData" finished-at="2025-11-17T21:59:48 EET" duration-ms="49" status="PASS">
+        <test-method signature="ReadData()[pri:3, instance:automationexercise.MyTestCases@4c550889]" started-at="2025-11-17T22:22:48 EET" name="ReadData" finished-at="2025-11-17T22:22:48 EET" duration-ms="124" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- ReadData -->
-        <test-method signature="DeleteRecord()[pri:4, instance:automationexercise.MyTestCases@101639ae]" started-at="2025-11-17T21:59:48 EET" name="DeleteRecord" finished-at="2025-11-17T21:59:48 EET" duration-ms="8" status="PASS">
+        <test-method signature="DeleteRecord()[pri:4, instance:automationexercise.MyTestCases@4c550889]" started-at="2025-11-17T22:22:48 EET" name="DeleteRecord" finished-at="2025-11-17T22:22:48 EET" duration-ms="7" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- DeleteRecord -->
-        <test-method signature="LoginTest()[pri:7, instance:automationexercise.MyTestCases@101639ae]" started-at="2025-11-17T21:59:48 EET" name="LoginTest" finished-at="2025-11-17T21:59:55 EET" duration-ms="7204" status="PASS">
+        <test-method signature="LoginTest()[pri:7, instance:automationexercise.MyTestCases@4c550889]" started-at="2025-11-17T22:22:48 EET" name="LoginTest" finished-at="2025-11-17T22:22:59 EET" duration-ms="10271" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- LoginTest -->
-        <test-method signature="SearchProduct()[pri:8, instance:automationexercise.MyTestCases@101639ae]" started-at="2025-11-17T21:59:55 EET" name="SearchProduct" finished-at="2025-11-17T21:59:58 EET" duration-ms="2853" status="PASS">
+        <test-method signature="SearchProduct()[pri:8, instance:automationexercise.MyTestCases@4c550889]" started-at="2025-11-17T22:22:59 EET" name="SearchProduct" finished-at="2025-11-17T22:23:07 EET" duration-ms="8758" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- SearchProduct -->
-        <test-method signature="AddRandomProductTest()[pri:9, instance:automationexercise.MyTestCases@101639ae]" started-at="2025-11-17T21:59:58 EET" name="AddRandomProductTest" finished-at="2025-11-17T22:00:05 EET" duration-ms="7580" status="PASS">
+        <test-method signature="AddRandomProductTest()[pri:9, instance:automationexercise.MyTestCases@4c550889]" started-at="2025-11-17T22:23:07 EET" name="AddRandomProductTest" finished-at="2025-11-17T22:23:17 EET" duration-ms="9844" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- AddRandomProductTest -->
-        <test-method signature="CheckoutTest()[pri:10, instance:automationexercise.MyTestCases@101639ae]" started-at="2025-11-17T22:00:05 EET" name="CheckoutTest" finished-at="2025-11-17T22:00:13 EET" duration-ms="7496" status="PASS">
+        <test-method signature="CheckoutTest()[pri:10, instance:automationexercise.MyTestCases@4c550889]" started-at="2025-11-17T22:23:17 EET" name="CheckoutTest" finished-at="2025-11-17T22:23:26 EET" duration-ms="8855" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- CheckoutTest -->

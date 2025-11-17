@@ -8,7 +8,9 @@ import java.util.List;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
@@ -156,15 +158,17 @@ public class MyTestCases extends Data {
    @Test(priority=8)
    public void SearchProduct() throws InterruptedException
    {
-	   driver.navigate().to(productsPage); 
-	   WebElement searchProduct=driver.findElement(By.id("search_product"));
+	   driver.navigate().to(productsPage);
+	   WebElement searchProduct = driver.findElement(By.id("search_product"));
+	 
 	   List <WebElement> itemNames=driver.findElements(By.tagName("p"));
-	    for (int i = 2; i < itemNames.size(); i += 2) {
-	        productIndexes.add(i);
-	    }
-	    int randomproduct=rand.nextInt(productIndexes.size());
-	   String product=itemNames.get(randomproduct).getText();
-	   Thread.sleep(2000);
+	  // List <Integer> productIndexes = new ArrayList<>();
+	    //for (int i =2; i <=itemNames.size(); i += 2) {
+	        //productIndexes.add(i);
+	    //}
+	    // randomproduct=rand.nextInt(productIndexes.size());
+	    int randprod=rand.nextInt(RandomproductNames.length);
+	   String product=itemNames.get(randprod).getText();
 	   searchProduct.sendKeys(product);
 	   WebElement searchSubmit=driver.findElement(By.id("submit_search"));
 	   searchSubmit.click();   
