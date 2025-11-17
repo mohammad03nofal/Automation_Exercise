@@ -3,6 +3,7 @@ package automationexercise;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.time.Duration;
+import java.util.ArrayList;
 import java.util.List;
 
 import org.openqa.selenium.By;
@@ -62,7 +63,7 @@ public class MyTestCases extends Data {
 	   int updatedrow=stmt.executeUpdate(query);
    }
    
-   @Test(priority=4)
+   @Test(priority=4,enabled=true)
 	public void DeleteRecord() throws SQLException
 	{
 		String query="delete  from customers where customerNumber=185 ";
@@ -153,10 +154,28 @@ public class MyTestCases extends Data {
    }
    
    @Test(priority=8)
+   public void SearchProduct() throws InterruptedException
+   {
+	   driver.navigate().to(productsPage); 
+	   WebElement searchProduct=driver.findElement(By.id("search_product"));
+	   List <WebElement> itemNames=driver.findElements(By.tagName("p"));
+	    for (int i = 2; i < itemNames.size(); i += 2) {
+	        productIndexes.add(i);
+	    }
+	    int randomproduct=rand.nextInt(productIndexes.size());
+	   String product=itemNames.get(randomproduct).getText();
+	   Thread.sleep(2000);
+	   searchProduct.sendKeys(product);
+	   WebElement searchSubmit=driver.findElement(By.id("submit_search"));
+	   searchSubmit.click();   
+   }
+   
+   @Test(priority=9,enabled=true)
    public void AddRandomProductTest()
    {
+	   driver.navigate().to(HomePage);
 	   
-	   for (int i = 1; i <= 8; i++) 
+	   for (int i = 1; i <=3; i++) 
 	   {  
 		List <WebElement> Products = driver.findElements(By.cssSelector(".fa.fa-plus-square"));
 		int RandomProduct = rand.nextInt(Products.size());
@@ -171,8 +190,10 @@ public class MyTestCases extends Data {
 	   }   
    }
    
-   @Test(priority=9)
-   public void CheckoutTest()
+   
+   
+   @Test(priority=10,enabled=true)
+   public void CheckoutTest() throws InterruptedException
    {
 	  driver.navigate().to(CartPage); 
 	  WebElement proceedtocheckout=driver.findElement(By.cssSelector(".btn.btn-default.check_out"));
@@ -181,6 +202,7 @@ public class MyTestCases extends Data {
 	  PlaceOrder.click();
 	  WebElement CardName=driver.findElement(By.name("name_on_card"));
 	  WebElement CardNumber=driver.findElement(By.name("card_number"));
+	  String Card_Name=CustomerFirstName+" "+CustomerLastName;
 	  CardName.sendKeys(Card_Name);
 	  CardNumber.sendKeys(cardnum);
 	  driver.findElement(By.name("cvc")).sendKeys("311");
@@ -188,9 +210,9 @@ public class MyTestCases extends Data {
 	  driver.findElement(By.name("expiry_year")).sendKeys("2025");
       WebElement payconfirm=driver.findElement(By.xpath("//button[@data-qa='pay-button']"));
       payconfirm.click();
+      Thread.sleep(2000);
       boolean actualResult=driver.getPageSource().contains("Your order has been confirmed!");
-      Assert.assertEquals(actualResult, true);
-	  
+      Assert.assertEquals(actualResult, true);  
    }
 
 	
